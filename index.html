@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#202d49" />
+  <title>Para Liz 🐾💗</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="background" aria-hidden="true"></div>
+  <div id="particles" aria-hidden="true"></div>
+  <button id="musicBtn" class="music-btn" type="button" aria-pressed="false">♫ Activar música</button>
+  <audio id="music" src="music/cancion.mp3" preload="none" loop></audio>
+  <main>
+    <section id="welcome" class="screen active" aria-labelledby="welcomeTitle">
+      <div class="panel">
+        <span class="cat">🐈</span>
+        <p class="eyebrow">UN DETALLITO ESPECIAL PARA TI</p>
+        <h1 id="welcomeTitle">Diana Lizbet<br>Martínez Burgos</h1>
+        <p>Pero entre nosotros, <strong>Liz</strong> o <strong>Scarlet</strong> suena todavía más bonito. ♡</p>
+        <div class="tiny-icons">🐾 ♡ 🐾</div>
+        <button class="primary" data-next="names">Tengo algo para ti ✨</button>
+        <p class="micro">Hecho con cariño y una dosis de gatitos</p>
+      </div>
+    </section>
+    <section id="names" class="screen" aria-labelledby="namesTitle">
+      <div class="panel">
+        <span class="cat">😸</span>
+        <p class="eyebrow">ANTES DE EMPEZAR...</p>
+        <h2 id="namesTitle">Una pequeña aclaración</h2>
+        <p id="nameJoke" class="joke" aria-live="polite">Este regalo es para Diana... 💌</p>
+        <button id="jokeBtn" class="primary">Continúa 😅</button>
+      </div>
+    </section>
+    <section id="gift" class="screen" aria-labelledby="giftTitle">
+      <div class="panel">
+        <p class="eyebrow">UNA SORPRESA PARA LIZ</p>
+        <h2 id="giftTitle">Las cosas bonitas se comparten 🐾</h2>
+        <p>Toca la cajita para descubrir lo que esconde.</p>
+        <button id="giftBox" class="gift" aria-label="Abrir regalo" aria-expanded="false">
+          <span class="gift-heart">♡</span>
+          <span class="gift-lid"></span>
+          <span class="gift-base"></span>
+        </button>
+        <div id="giftReveal" class="reveal" hidden>
+          <h3>¡Sorpresa, Scarlet! 🎉</h3>
+          <img src="images/te-quiero-mucho-te-amo-tanto-texto-espanol-66214749.webp" alt="Tarjeta que dice Te quiero mucho" onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+          <p class="fallback" hidden>💗 ¡Te quiero mucho! 💗</p>
+          <p>Que nunca te falten motivos para sonreír, abrazos sinceros ni gatitos que te alegren el día. 🐈</p>
+          <button class="primary" data-next="memories">Ver nuestros recuerdos 📸</button>
+        </div>
+      </div>
+    </section>
+    <section id="memories" class="screen" aria-labelledby="memoriesTitle">
+      <div class="panel">
+        <p class="eyebrow">RECUERDOS QUE VALEN MUCHO</p>
+        <h2 id="memoriesTitle">Pequeños momentos, grandes sonrisas</h2>
+        <div class="photo-card">
+          <img id="memoryImg" alt="Fotografía de un recuerdo" />
+          <p id="memoryCaption"></p>
+        </div>
+        <div class="photo-controls">
+          <button id="prevPhoto" class="secondary">← Antes</button>
+          <span id="photoCounter" aria-live="polite">1 / 6</span>
+          <button id="nextPhoto" class="secondary">Después →</button>
+        </div>
+        <button class="primary" data-next="words">Más cositas para ti 🐾</button>
+      </div>
+    </section>
+    <section id="words" class="screen" aria-labelledby="wordsTitle">
+      <div class="panel">
+        <p class="eyebrow">PALABRAS CON CARIÑO</p>
+        <h2 id="wordsTitle">Hay personas que hacen bonito un día normal</h2>
+        <div class="quote-card">
+          <img src="images/fe8223b0315132f069b14c6fe9b79d41.jpg" alt="Dedicatoria sobre personas especiales" onerror="this.hidden=true" />
+          <p>Hay personas que llegan sin hacer ruido y terminan dejando recuerdos muy bonitos. Gracias por las pláticas, las risas y los momentos compartidos.</p>
+          <p>No sé si decirte Diana, Liz o Scarlet... pero sí sé que mereces muchas cosas bonitas. 🌷</p>
+        </div>
+        <button class="primary" data-next="letter">Una última sorpresa 💌</button>
+      </div>
+    </section>
+    <section id="letter" class="screen" aria-labelledby="letterTitle">
+      <div class="panel">
+        <p class="eyebrow">UNA CARTITA PARA TI</p>
+        <h2 id="letterTitle">Para Liz, con cariño ♡</h2>
+        <button id="envelope" class="envelope" aria-expanded="false" aria-label="Abrir carta">💌<span>Toca para abrir</span></button>
+        <div id="letterText" class="letter-text" hidden>
+          <p>Querida Liz:</p>
+          <p>Quise prepararte algo diferente, algo que pudieras abrir cuando quisieras y que te sacara una sonrisa.</p>
+          <p>Me gustan los momentos que hemos compartido, las conversaciones, las bromas y esos pequeños recuerdos que se vuelven especiales sin planearlo.</p>
+          <p>Ojalá nunca te falten razones para estar feliz, personas que te cuiden y muchos gatitos que te acompañen. 🐾</p>
+          <p>Y si alguna vez vuelvo a decirte Diana cuando quería decir Liz... ya sabes que mi cerebro se enreda, pero el cariño no. 😅</p>
+          <p class="signature">Con mucho cariño, Enrique 💗</p>
+          <button class="primary" data-next="vouchers">
+  🎟️ Scarlet, todavía hay algo para ti
+</button>
+          <button id="restart" class="secondary">Volver a ver la sorpresa ↻</button>
+        </div>
+      </div>
+    </section>
+
+<!-- ===================================
+     VALES ESPECIALES PARA LIZ 🐾
+=================================== -->
+
+<section id="vouchers" class="screen"
+         aria-labelledby="vouchersTitle">
+
+  <div class="panel">
+
+    <span class="cat">🐱</span>
+
+    <p class="eyebrow">
+      EDICIÓN ESPECIAL SCARLET
+    </p>
+
+    <h2 id="vouchersTitle">
+      Tus vales de amistad 🎟️
+    </h2>
+
+    <p>
+      Porque los mejores regalos también son
+      los momentos que podemos compartir.
+      Elige el vale que quieras usar. 💗
+    </p>
+
+    <div class="voucher-grid">
+
+      <article class="voucher">
+        <span>🫂</span>
+        <h3>Vale por un abrazo</h3>
+        <p>Uno de esos abrazos que duran
+        lo que tú necesites.</p>
+        <button onclick="redeemVoucher(this, 'Un abrazo')">
+          Canjear vale
+        </button>
+      </article>
+
+      <article class="voucher">
+        <span>☕</span>
+        <h3>Vale por un cafecito</h3>
+        <p>Un café, un postre y una
+        buena plática.</p>
+        <button onclick="redeemVoucher(this, 'Un cafecito')">
+          Canjear vale
+        </button>
+      </article>
+
+      <article class="voucher">
+        <span>😂</span>
+        <h3>Vale por escuchar tus dramas</h3>
+        <p>Con chisme incluido y
+        sin juzgar.</p>
+        <button onclick="redeemVoucher(this, 'Escuchar tus dramas')">
+          Canjear vale
+        </button>
+      </article>
+
+      <article class="voucher">
+        <span>🍦</span>
+        <h3>Vale por un helado</h3>
+        <p>El sabor lo eliges tú.</p>
+        <button onclick="redeemVoucher(this, 'Un helado')">
+          Canjear vale
+        </button>
+      </article>
+
+      <article class="voucher">
+        <span>📸</span>
+        <h3>Vale por una aventura</h3>
+        <p>Un paseo, risas y nuevas
+        fotografías de recuerdo.</p>
+        <button onclick="redeemVoucher(this, 'Una aventura')">
+          Canjear vale
+        </button>
+      </article>
+
+      <article class="voucher">
+        <span>🐈</span>
+        <h3>Vale por un día gatuno</h3>
+        <p>Memes de gatitos, fotos
+        y muchos miau.</p>
+        <button onclick="redeemVoucher(this, 'Un día gatuno')">
+          Canjear vale
+        </button>
+      </article>
+
+      <article class="voucher secret">
+        <span>😅</span>
+        <h3>Vale por llamarte Liz</h3>
+        <p>Un día entero sin decirte Diana.
+        Si fallo, te debo un dulce.</p>
+        <button onclick="redeemVoucher(this, 'Llamarte Liz correctamente')">
+          Canjear vale
+        </button>
+      </article>
+
+      <article class="voucher secret">
+        <span>👑</span>
+        <h3>Vale por un día donde tú eliges</h3>
+        <p>Tú eliges el plan y nos
+        ponemos de acuerdo.</p>
+        <button onclick="redeemVoucher(this, 'Un día donde tú eliges')">
+          Canjear vale
+        </button>
+      </article>
+
+    </div>
+
+    <p id="voucherMessage"
+       class="voucher-message"
+       aria-live="polite"></p>
+
+    <button class="secondary" data-next="letter">
+      ← Volver a mi carta
+    </button>
+
+    <button id="restartVouchers" class="secondary">
+      Volver al inicio ↻
+    </button>
+
+  </div>
+</section>
+
+
+  </main>
+</body>
+</html>
